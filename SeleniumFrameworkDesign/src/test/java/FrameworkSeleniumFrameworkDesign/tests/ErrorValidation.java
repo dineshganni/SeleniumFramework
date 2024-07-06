@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import SeleniumFrameworkDesign.TestComponents.BaseTests;
-import SeleniumFrameworkDesign.pageobjects.Landingpage;
+import SeleniumFrameworkDesign.TestComponents.Retry;
 import SeleniumFrameworkDesign.pageobjects.cartpage;
 import SeleniumFrameworkDesign.pageobjects.productcart;
 import junit.framework.Assert;
@@ -15,13 +15,13 @@ import junit.framework.Assert;
 public class ErrorValidation extends BaseTests {
 
 	@SuppressWarnings("deprecation")
-	@Test(groups = {"ErrorValidation"})
+	@Test(groups = {"ErrorValidation"}, retryAnalyzer=Retry.class)
 	public void loginerrorvalidation() throws InterruptedException, IOException{
 		
 		
 		String itemname="IPHONE 13 PRO";
 		landingpage.applicationlogin("marse@gmail.comm", "Mars@123");
-		Assert.assertEquals("Incorrect email or password.", landingpage.geterrormessage());
+		Assert.assertEquals("Incorrect emails or password.", landingpage.geterrormessage());
 	}
 	
 	@Test

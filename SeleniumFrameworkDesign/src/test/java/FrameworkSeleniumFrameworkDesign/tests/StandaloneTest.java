@@ -1,13 +1,10 @@
 package FrameworkSeleniumFrameworkDesign.tests;
 
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.List;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -51,6 +48,8 @@ public class StandaloneTest extends BaseTests {
 		//driver.quit();
 		
 	}
+	 
+	
 	
 	@DataProvider()
 	public Object[][] getdata() throws IOException 
